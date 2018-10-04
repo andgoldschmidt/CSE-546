@@ -27,6 +27,7 @@
     &= 1
 \end{align}
 Line \ref{te} uses triangle inequality, line \ref{as} uses absolutely scalability, and line \ref{setdef} uses the definition of S.
+\newline
 \newline 
 (b) We will proceed by counterexample to show $\norm{x} := (\sum _{i=1}^{n}{\abs{x_i}^{1/2}})^2$ is not a norm. Consider x=(0,1) and y=(1,0). Compute:
 \begin{align}
@@ -202,16 +203,18 @@ We arrive at Eq. \ref{indicator} by noting the idempotency of an indicator funct
     =&\underset{x \in \mathds{R}}{\text{sup}} \frac{1}{n} F(x)(1-F(x)) \\
     \le& \frac{1}{n}\frac{1}{2}(1-\frac{1}{2}) = \frac{1}{4n} \label{inequality}
 \end{align}
-by using that $y(1-y)$ is maximal at $y=1/2$.
+We use some calculus to argue $y(1-y)$ is maximal at $y=1/2$.
 
 \section{Programming}
 
 \paragraph{2.9}
 For (a) and (b), we are to produce Fig. \ref{fig:plot9}. We choose $n=40,000$ in the inequality in Eq. \ref{inequality} for the bound $\underset{x \in \mathds{R}}{\text{sup}} \sqrt{E[(\hat{F}_n(x)-F(x))^2]} \le 0.0025$ to hold. Fig. \ref{fig:plot9} shows that the sum of k independent, zero-mean random variables with variance 1/k converges to a standard-normal distribution as $k\longrightarrow\infty$. The figure shows this by plotting the empirical cumulative distribution functions of such sums of random variables and comparing these to the cumulative distribution function of a standard-normal-distributed random variable.
 
+My code:
+
 \begin{figure}[h]
   \includegraphics[width=0.75\linewidth]{plot_hw0p9.png}
-  \caption{The figure shows $\hat{F}_n(x)=\frac{1}{n} \sum_{j=1}^{n} I\{Y^{(k)}_j\le x\}$ where $Y^{(k)}_j=\frac{1}{\sqrt{k}}\sum_{i=1}^{k}{B_i}$ for n=40,000 for various values of k. For reference the plot includes $\hat{F}_n(x)=\frac{1}{n} \sum_{i=1}^{n} I\{Z_i\le x\}$ with standard-normal random variables $Z_i \sim N(0,1)$.}
+  \caption{The figure shows $\hat{F}_n(x)=\frac{1}{n} \sum_{j=1}^{n} I\{Y^{(k)}_j\le x\}$ where $Y^{(k)}_j=\frac{1}{\sqrt{k}}\sum_{i=1}^{k}{B_i}$ for n=40,000 for various values of k. For reference the plot includes $\hat{F}_n(x)=\frac{1}{n} \sum_{i=1}^{n} I\{Z_i\le x\}$ with standard-normal random variables $Z_i \sim N(0,1)$ because these will have exactly the empirical cumulative distribution function that the central limit theorems asserts $Y^{(k)}$ approaches in the large k limit.}
   \label{fig:plot9}
 \end{figure}
 
