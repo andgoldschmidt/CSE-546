@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-import scipy.stats as ss
 
 # Set-up: Iterations and random seed
 n = 40000
