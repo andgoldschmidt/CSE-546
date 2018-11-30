@@ -1,0 +1,6 @@
+.ipynb_checkpoints
+.obj/
+__pycache__
+figs/
+jokes/
+.idea/
