@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 *.aux
 *.glo
 *.idx
@@ -29,7 +28,8 @@ Playground/
 .obj/
 __pycache__
 figs/
-*/data/
+data/
 datak/
+Data/
 jokes/
 .idea/
