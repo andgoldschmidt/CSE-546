@@ -29,7 +29,7 @@ Playground/
 .obj/
 __pycache__
 figs/
-data/
+*/data/
 datak/
 jokes/
 .idea/
