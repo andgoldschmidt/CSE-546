@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.aux
 *.glo
 *.idx
@@ -30,4 +31,5 @@ __pycache__
 figs/
 data/
 datak/
+jokes/
 .idea/
