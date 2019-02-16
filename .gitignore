@@ -24,3 +24,8 @@
 *.fdb_latexmk
 *.fls
 Playground/
+.ipynb_checkpoints
+.obj/
+__pycache__
+figs/
+data/
