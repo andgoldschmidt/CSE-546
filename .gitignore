@@ -29,3 +29,5 @@ Playground/
 __pycache__
 figs/
 data/
+datak/
+.idea/
